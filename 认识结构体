@@ -1,0 +1,18 @@
+#include<stdio.h>
+struct book
+{char name[20];
+short price;
+};
+int main()
+{struct book t={"a",20};
+struct book* p=&t;
+printf("%s\n",p->name);
+return 0;
+}
+//int main()
+//{int a;
+//int* p=&a;
+//*p=3;
+//printf("%d",sizeof(p));
+//return 0;
+//}
