@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+
+
+	
+int main()
+{   int a;
+	scanf("%d",&a);
+	sushu(a);
+    return 0;
+}
+
+int sushu(int x)
+{int i;
+for(i=2;i<x;i++)
+{if(x%i==0)
+break;
+}
+if(i==x)
+	printf("%d是素数\n",x);
+else
+	printf("%d不是素数\n",x);
+}
