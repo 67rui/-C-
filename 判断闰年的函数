@@ -1,0 +1,14 @@
+int main()
+{   int a;
+	scanf("%d",&a);
+	runnian(a);
+    return 0;
+}
+
+int runnian(int x)
+{int i;
+if((x%4==0&&x%100!=0)||(x%400==0))
+	printf("%d年是闰年",x);
+else
+	printf("%d年不是闰年",x);
+}
