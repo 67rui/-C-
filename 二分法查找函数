@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+int search(int arr[],int k,int sz)
+{int right=sz-1;
+ int mid=right/2;
+int left=0;
+while(left<=right)
+{
+if(arr[mid]==k)
+return mid;
+else if(arr[mid]<k)
+{left=mid+1;
+mid=(left+right)/2;
+}
+else
+{right=mid-1; 
+mid=(left+right)/2;
+}
+}
+return -1;
+}    
+
+int main()
+{int arr[]={3,4,6,9,22,56,88};
+int sz=sizeof(arr)/sizeof(arr[0]);
+int k;
+scanf("%d",&k);
+
+printf("%d的下标为%d",k,search(arr, k, sz));
+return 0;
+}
+	
